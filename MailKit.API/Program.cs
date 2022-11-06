@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("Settings/MailSettings"));
-builder.Services.AddScoped<IMailService, SendMailService>();
+builder.Services.AddScoped<ISendMailService, SendMailService>();
 
 var app = builder.Build();
 
